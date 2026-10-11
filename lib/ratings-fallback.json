@@ -1,0 +1,28 @@
+{
+  "codeforces": {
+    "handle": "Ritwik_08",
+    "currentRating": 916,
+    "peakRating": 916,
+    "solved": null,
+    "updatedAt": "2026-10-11T16:06:16.903Z",
+    "source": "fallback"
+  },
+  "codechef": {
+    "handle": "eager_beam_07",
+    "currentRating": 1426,
+    "peakRating": 1462,
+    "solved": null,
+    "updatedAt": "2026-10-11T16:06:16.903Z",
+    "source": "fallback"
+  },
+  "leetcode": {
+    "handle": "KYfpafaSHy",
+    "currentRating": 1651.7616560020542,
+    "peakRating": 1694.463,
+    "solved": 128,
+    "updatedAt": "2026-10-11T16:06:16.903Z",
+    "source": "fallback"
+  },
+  "checkedAt": "2026-10-11T16:06:16.903Z",
+  "mode": "snapshot"
+}

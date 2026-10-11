@@ -1,0 +1,8 @@
+{
+  "source": "https://raw.githubusercontent.com/martynafford/natural-earth-geojson/refs/heads/master/110m/physical/ne_110m_land.json",
+  "license": "Public domain (Natural Earth)",
+  "sha256": "6c8b289fed7495ab9c9fdcf99baa24f58001807d0ad30d7726f76d6506f8204d",
+  "features": 127,
+  "dots": 13152,
+  "spacingDegrees": 1.28
+}

@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "source": "https://prod.spline.design/GwxV5oCmB76tUGRR/scene.splinecode",
+    "version": "1.12.98",
+    "sourceSha256": "ee9f9b07b48c9e21666bf410115321d5688a02c29b5b9ea9385425e2d0b7ce06",
+    "repairs": [
+      {
+        "object": "Cabeza",
+        "action": "26faeff2-f629-4220-9b9e-41dc1d1f2c72",
+        "removed": "Transition references a deleted state; retain the parent event."
+      }
+    ]
+  },
+  "about": {
+    "source": "https://prod.spline.design/nfobiJJ6uygdFskf/scene.splinecode",
+    "version": "1.12.98",
+    "sourceSha256": "c70537888f70fb731b3aa2103c82623c0376024c3d9ae3ac8a7a05af54da91c3",
+    "repairs": [
+      {
+        "object": "HAND_R",
+        "action": "e3c62185-2eca-4018-865c-9cdedb26eca8",
+        "from": "9a0fe2d2-eccc-487b-aa91-931c3dbe2a79",
+        "to": "46b358fe-3904-45c9-9bcb-c299fecbf8af"
+      },
+      {
+        "object": "HAND_R",
+        "action": "e3c62185-2eca-4018-865c-9cdedb26eca8",
+        "from": "9a0fe2d2-eccc-487b-aa91-931c3dbe2a79",
+        "to": "46b358fe-3904-45c9-9bcb-c299fecbf8af"
+      }
+    ]
+  },
+  "footer": {
+    "source": "https://prod.spline.design/VKSgNEdt6wKREEnz/scene.splinecode",
+    "version": "1.12.98",
+    "sourceSha256": "1d6c0bd2b24b4eade29a838e01de1519385f6bee7d9b2f15ba5cc2cee0ee696a",
+    "repairs": []
+  }
+}

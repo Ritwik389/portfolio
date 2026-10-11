@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+.DS_Store
+*.tsbuildinfo
+.venv*/
+# Local work and verification artifacts outside the portfolio source.
+/epr-plastic-audit/
+/waste-audit-blog/
+/output/
+/.vscode/
+next-env.d.ts
