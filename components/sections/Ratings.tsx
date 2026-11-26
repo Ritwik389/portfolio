@@ -15,7 +15,7 @@ export default function Ratings() {
   useEffect(() => {
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 12000);
-    fetch(assetPath("/api/ratings/"), { signal: controller.signal })
+    fetch(assetPath("/ratings.json"), { signal: controller.signal })
       .then(async (response) => {
         if (!response.ok) throw new Error("Ratings unavailable");
         const data: unknown = await response.json();

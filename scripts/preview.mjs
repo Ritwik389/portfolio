@@ -21,7 +21,7 @@ createServer(async (request, response) => {
     if (file !== root && !file.startsWith(`${root}${sep}`)) { response.writeHead(403).end(); return; }
     if ((await stat(file)).isDirectory()) file = resolve(file, "index.html");
     const info = await stat(file);
-    response.writeHead(200, { "Content-Type": pathname.replace(/\/$/, "") === "/api/ratings" ? "application/json; charset=utf-8" : types[extname(file)] || "application/octet-stream", "Content-Length": info.size });
+    response.writeHead(200, { "Content-Type": pathname.replace(/\/$/, "") === "/ratings.json" ? "application/json; charset=utf-8" : types[extname(file)] || "application/octet-stream", "Content-Length": info.size });
     if (request.method === "HEAD") response.end();
     else createReadStream(file).pipe(response);
   } catch {
