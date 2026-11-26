@@ -8,11 +8,11 @@ export default function Experience() {
       <div className="wrap">
         <SectionHead
           num="04"
-          kicker="Experience & leadership"
+          kicker="Experience"
           id="experience-title"
           title={
             <>
-              Work and teaching
+              Where I’ve worked
             </>
           }
         />

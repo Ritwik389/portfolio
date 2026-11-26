@@ -42,7 +42,7 @@ export default function About() {
               GPU and a legal research assistant for Smart India Hackathon. This summer I interned at Deloitte, turning notebook-based ML workflows
               into AWS Glue jobs.
             </p>
-            <p>I also help run the first-year ML sessions at AIMS-DTU, and this semester I mentored a Class XI group at a government school.</p>
+            <p>Outside of all that, I’m part of AIMS-DTU, the college ML society, and help out with its first-year sessions now and then.</p>
 
             <div className="now">
               <p className="mono-label">

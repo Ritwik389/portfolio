@@ -268,29 +268,6 @@ export const experience = [
     ],
     tech: ["SageMaker", "AWS Glue", "S3", "Athena", "PySpark"],
   },
-  {
-    id: "aims",
-    org: "AIMS-DTU",
-    role: "Senior Member",
-    period: "Sep 2025 – Present",
-    location: "Delhi Technological University",
-    points: [
-      "Co-leading a 20+ session ML curriculum for first-year students, with 100+ attendees per session.",
-      "Emceed the society’s orientation for 500+ attendees; ran operations for AWS Build with Bharat and the AIMS × TinyFish Buildathon.",
-    ],
-    tech: ["Teaching", "Events", "Community"],
-  },
-  {
-    id: "mentoring",
-    org: "Community engagement, DTU",
-    role: "Mentor, Class XI Science",
-    period: "Sep – Nov 2026",
-    location: "Government school, Delhi",
-    points: [
-      "Mentored 30+ Class XI students across 8 sessions (about 22 contact hours) on study planning, backlogs and exam preparation, and set up six peer study circles.",
-    ],
-    tech: ["Mentoring"],
-  },
 ];
 
 export interface Award {
@@ -373,7 +350,6 @@ export const certifications = [
 
 export const now = [
   "Designing an RL reward for scattered sea-ice targets",
-  "Co-leading the AIMS-DTU first-year ML curriculum",
   "Contributing fixes to pgmpy and neural-lam",
 ];
 
