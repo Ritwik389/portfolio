@@ -6,7 +6,7 @@ import { extname, resolve, sep } from "node:path";
 const root = resolve("out");
 const port = Number(process.env.PORT || 3000);
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".png": "image/png", ".pdf": "application/pdf", ".woff2": "font/woff2", ".xml": "application/xml", ".txt": "text/plain; charset=utf-8" };
+const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".png": "image/png", ".webp": "image/webp", ".jpg": "image/jpeg", ".ico": "image/x-icon", ".pdf": "application/pdf", ".woff2": "font/woff2", ".xml": "application/xml", ".txt": "text/plain; charset=utf-8" };
 
 if (!existsSync(root)) {
   console.error("Build the portfolio first with npm run build.");

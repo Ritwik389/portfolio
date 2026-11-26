@@ -1,0 +1,98 @@
+/* Two identities, one system.
+   Light — "paper": warm cream, navy ink, one cobalt accent.
+   Dark  — "lab":   near-black instrument ground, radar teal signal, amber status. */
+:root {
+  color-scheme: light;
+  --bg: #f6f2e9;
+  --bg-2: #efe8da;
+  --surface: #fffdf8;
+  --surface-2: #f3ede1;
+  --ink: #121a2b;
+  --ink-2: #27324a;
+  --muted: #535e76;
+  --faint: #7d879b;
+  --line: #e2d9c7;
+  --line-2: #cbbfa8;
+  --accent: #2c52bd;
+  --accent-2: #213f93;
+  --accent-wash: #e5ecfb;
+  --on-accent: #ffffff;
+  --signal: #b4531f;
+  --ok: #1d7a4b;
+
+  --panel: #0f1729;
+  --panel-2: #172238;
+  --panel-3: #22304d;
+  --panel-line: #2b3b5c;
+  --panel-ink: #e9eef7;
+  --panel-muted: #a9b6cd;
+  --panel-accent: #8fb1ff;
+  --on-panel-accent: #0b1428;
+
+  --plate: #ffffff;
+  --plate-line: #e5dccb;
+  --grid: rgb(18 26 43 / 5.5%);
+  --speckle: 18 26 43;
+  --shadow-s: 0 1px 0 rgb(18 26 43 / 4%), 0 6px 18px -12px rgb(18 26 43 / 22%);
+  --shadow-l: 0 1px 0 rgb(18 26 43 / 4%), 0 30px 60px -36px rgb(18 26 43 / 38%);
+  --overlay: rgb(10 15 28 / 58%);
+  --selection: #cfdcff;
+
+  --radius-xs: 6px;
+  --radius-s: 10px;
+  --radius: 16px;
+  --radius-l: 24px;
+  --radius-pill: 999px;
+
+  --font-display: var(--font-bricolage), "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-bricolage), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-serif: var(--font-instrument), Georgia, "Times New Roman", serif;
+
+  --ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --fast: 160ms;
+  --normal: 260ms;
+
+  --wrap: 1240px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --nav-h: 72px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #07090d;
+  --bg-2: #0a0d12;
+  --surface: #0d1117;
+  --surface-2: #121821;
+  --ink: #e7ecf1;
+  --ink-2: #c3ccd7;
+  --muted: #8f9bab;
+  --faint: #626e7f;
+  --line: #1a222d;
+  --line-2: #29333f;
+  --accent: #5fe3c6;
+  --accent-2: #8af0d9;
+  --accent-wash: rgb(95 227 198 / 10%);
+  --on-accent: #03140f;
+  --signal: #f2a93b;
+  --ok: #5fe3c6;
+
+  --panel: #0b0f15;
+  --panel-2: #10161e;
+  --panel-3: #18212c;
+  --panel-line: #212c39;
+  --panel-ink: #e7ecf1;
+  --panel-muted: #93a0b1;
+  --panel-accent: #5fe3c6;
+  --on-panel-accent: #03140f;
+
+  --plate: #0b192f;
+  --plate-line: #1d2b40;
+  --grid: rgb(95 227 198 / 4.5%);
+  --speckle: 95 227 198;
+  --shadow-s: 0 0 0 1px rgb(255 255 255 / 2%);
+  --shadow-l: 0 0 0 1px rgb(255 255 255 / 3%), 0 40px 80px -40px rgb(0 0 0 / 80%);
+  --overlay: rgb(2 4 8 / 72%);
+  --selection: rgb(95 227 198 / 28%);
+}

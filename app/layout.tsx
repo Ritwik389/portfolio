@@ -1,50 +1,112 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, IBM_Plex_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
 import MotionProvider from "@/components/MotionProvider";
 import { assetPath, siteUrl } from "@/lib/paths";
+import { initializeTheme, themeColors } from "@/lib/theme";
+import { profile, socials } from "@/lib/data";
 
-const fraunces = localFont({
-  src: [
-    { path: "../public/fonts/fraunces-normal.woff2", style: "normal", weight: "400 700" },
-    { path: "../public/fonts/fraunces-italic.woff2", style: "italic", weight: "400 700" },
-  ],
-  variable: "--font-display",
+const display = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-mono",
+  display: "swap",
+});
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument",
   display: "swap",
 });
 
-const manrope = localFont({
-  src: "../public/fonts/manrope-normal.woff2",
-  weight: "400 800",
-  variable: "--font-body",
-  display: "swap",
-});
+const title = "Ritwik Jain · Multimodal AI Researcher";
+const description =
+  "Ritwik Jain is an undergraduate researcher at Delhi Technological University working on vision-language reasoning for SAR remote sensing, speech separation and evidence-grounded LLM systems. Former AI/ML intern at Deloitte.";
 
 export const metadata: Metadata = {
-  title: "Ritwik Jain - Portfolio",
-  description: "AI/ML and full-stack developer at DTU. Former Deloitte AI/ML intern building intelligent applications and cloud ML pipelines. Seeking internship opportunities.",
+  title,
+  description,
   metadataBase: new URL(`${siteUrl}/`),
   alternates: { canonical: `${siteUrl}/` },
-  authors: [{ name: "Ritwik Jain" }],
+  authors: [{ name: profile.name, url: `${siteUrl}/` }],
+  keywords: [
+    "Ritwik Jain",
+    "multimodal AI",
+    "vision-language models",
+    "SAR sea ice",
+    "speech separation",
+    "GRPO",
+    "RAG",
+    "Delhi Technological University",
+    "machine learning portfolio",
+  ],
   icons: { icon: assetPath("/favicon.svg") },
-  openGraph: { type: "website", url: `${siteUrl}/`, title: "Ritwik Jain | AI/ML & Full-Stack Developer", description: "DTU · Deloitte AI/ML internship · Intelligent applications and cloud ML pipelines", siteName: "Ritwik Jain Portfolio", images: [{ url: `${siteUrl}/social-preview.png`, width: 1200, height: 630, alt: "Ritwik Jain — AI/ML & Full-Stack Developer" }] },
-  twitter: { card: "summary_large_image", title: "Ritwik Jain | AI/ML & Full-Stack Developer", description: "Building intelligent applications. Currently seeking internships.", images: [`${siteUrl}/social-preview.png`] },
+  openGraph: {
+    type: "profile",
+    url: `${siteUrl}/`,
+    title,
+    description:
+      "Vision-language reasoning for SAR sea ice, five-speaker speech separation, proof-carrying RAG. DTU · ex-Deloitte.",
+    siteName: "Ritwik Jain",
+    images: [{ url: `${siteUrl}/social-preview.png`, width: 1200, height: 630, alt: "Ritwik Jain — multimodal AI researcher" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: "Vision-language reasoning, speech separation and evidence-grounded LLMs.",
+    images: [`${siteUrl}/social-preview.png`],
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  url: `${siteUrl}/`,
+  image: `${siteUrl}/portrait.webp`,
+  jobTitle: "Undergraduate Researcher, Multimodal AI",
+  email: `mailto:${profile.email}`,
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Delhi Technological University" },
+  address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressCountry: "IN" },
+  knowsAbout: ["Vision-language models", "Reinforcement learning", "Speech separation", "Retrieval-augmented generation", "Mechanistic interpretability"],
+  sameAs: socials.filter((s) => s.id !== "email").map((s) => s.href),
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${manrope.variable}`}>
+    <html
+      lang="en"
+      data-theme="light"
+      className={`${display.variable} ${mono.variable} ${serif.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <meta name="theme-color" content={themeColors.light} suppressHydrationWarning />
+        <script dangerouslySetInnerHTML={{ __html: initializeTheme }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
       <body>
-        <a href="#main-content" className="skip-link glass-panel-strong rounded-full px-5 py-3 font-body text-sm font-semibold text-oxblood">Skip to content</a>
-        <MotionProvider>
-        <CustomCursor />
-        {children}
-        </MotionProvider>
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        <noscript>
+          <style>{`.reveal{opacity:1!important;transform:none!important}.js-only{display:none!important}`}</style>
+        </noscript>
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

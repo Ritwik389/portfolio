@@ -5,5 +5,13 @@ import nextTypescript from "eslint-config-next/typescript";
 export default defineConfig([
   ...nextVitals,
   ...nextTypescript,
-  globalIgnores([".next/**", "out/**", "node_modules/**", ".venv*/**", "next-env.d.ts"]),
+  globalIgnores([
+    ".next/**",
+    ".taste-skill/**",
+    ".hallmark/**",
+    "out/**",
+    "node_modules/**",
+    ".venv*/**",
+    "next-env.d.ts",
+  ]),
 ]);

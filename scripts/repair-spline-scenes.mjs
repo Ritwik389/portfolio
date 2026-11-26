@@ -21,8 +21,6 @@ for (const [Class, type, write, read] of [
 const codec = new Packr({ structuredClone: true });
 const sources = {
   hero: "https://prod.spline.design/GwxV5oCmB76tUGRR/scene.splinecode",
-  about: "https://prod.spline.design/nfobiJJ6uygdFskf/scene.splinecode",
-  footer: "https://prod.spline.design/VKSgNEdt6wKREEnz/scene.splinecode",
 };
 const manifest = {};
 await mkdir("public/scenes", { recursive: true });
