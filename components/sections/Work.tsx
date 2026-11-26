@@ -58,10 +58,10 @@ export default function Work() {
           id="work-title"
           title={
             <>
-              Systems, built end to end <em>and evaluated</em>
+              Things I’ve built
             </>
           }
-          intro="From training runs on a free Kaggle T4 to deployed demos, each project ships with numbers I can defend."
+          intro="Some started as hackathon entries, some as weekend experiments. The numbers are from my own evaluations, and the code for each one is on GitHub."
         />
 
         <div className="featured">
@@ -148,7 +148,7 @@ export default function Work() {
 
         <div className="archive reveal">
           <div className="archive-head">
-            <h3>More from the lab bench</h3>
+            <h3>Other projects</h3>
             <a className="text-link" href="https://github.com/Ritwik389?tab=repositories" target="_blank" rel="noopener noreferrer">
               All repositories <ArrowUpRight size={15} aria-hidden="true" />
             </a>

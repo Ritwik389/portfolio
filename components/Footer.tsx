@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-top">
           <p className="footer-sign">
-            Stay curious<span>.</span>
+            Thanks for stopping by<span>.</span>
           </p>
           <a className="icon-btn footer-up" href="#top" aria-label="Back to top">
             <ArrowUp size={18} aria-hidden="true" />
@@ -54,16 +54,16 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-hint">
-            <p className="mono-label">Hidden in plain sight</p>
+            <p className="mono-label">Shortcuts</p>
             <p>
-              Press <kbd>`</kbd> for the notebook, <kbd>⌘K</kbd> to search, and try the Konami code if you’re feeling nostalgic.
+              <kbd>`</kbd> opens the notebook version of this site and <kbd>⌘K</kbd> searches it. The Konami code works too.
             </p>
           </div>
         </div>
         <div className="footer-meta">
           <p>© 2026 {profile.name} · New Delhi</p>
           <p>
-            Built with Next.js, Motion and too much chai.{" "}
+            Built by me with Next.js.{" "}
             <a className="text-link" href="https://github.com/Ritwik389/portfolio" target="_blank" rel="noopener noreferrer">
               Source
             </a>

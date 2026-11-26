@@ -102,11 +102,11 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="hero-lede">
-              I build multimodal models <em>and measure, honestly,</em> where they fail.
+              I’m an IT student at DTU working on machine learning research.
             </p>
             <p className="hero-sub">
-              Undergraduate researcher at <strong>DTU</strong> working on vision-language reasoning for SAR remote sensing, five-speaker speech
-              separation and evidence-grounded LLM systems. Previously <strong>AI/ML intern at Deloitte</strong>.
+              Mostly vision-language models and speech separation, plus full projects built around them. This summer I was an{" "}
+              <strong>AI/ML intern at Deloitte</strong>.
             </p>
             <div className="hero-cta">
               <a className="btn btn-primary" href="#research">

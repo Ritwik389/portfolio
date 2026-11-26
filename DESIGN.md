@@ -7,7 +7,7 @@ An undergraduate **researcher** in multimodal AI, not a generic full-stack devel
 - **Paper (light)**: cream `#f6f2e9`, navy ink `#121a2b`, one cobalt accent `#2c52bd`. It follows the earlier "portfolio 2" direction.
 - **Lab (dark)**: near-black `#07090d`, radar teal `#5fe3c6`, amber status `#f2a93b`, a faint grid, a SAR-speckle hero and a slow radar sweep.
 - Tokens live in `app/tokens.css`. The theme follows the system until the visitor picks one, and the choice is stored in `localStorage`.
-- Type: Bricolage Grotesque (display/body), IBM Plex Mono (labels, data), Instrument Serif italic (one accent phrase per heading).
+- Type: Bricolage Grotesque (display/body), IBM Plex Mono (labels, data), Instrument Serif italic for project taglines.
 - Recurring motif: "figure plates" with corner ticks and `FIG. nn` labels, as in a paper.
 
 ## Fun, on purpose

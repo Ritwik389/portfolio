@@ -75,10 +75,10 @@ export default function Contact() {
             id="contact-title"
             title={
               <>
-                Let’s build something <em>measurable</em>
+                Get in touch
               </>
             }
-            intro="Research internships, collaborations, a hard ML problem, or just a good paper recommendation: my inbox is open."
+            intro="I’m looking for research internships, and I’m always happy to talk about projects or anything ML. Email is the quickest way to reach me."
           />
           <a href={`mailto:${profile.email}`} className="contact-email">
             {profile.email}

@@ -14,10 +14,10 @@ export default function Research() {
           id="research-title"
           title={
             <>
-              Questions I’m <em>working on</em>
+              What I’m researching
             </>
           }
-          intro="I care about whether a model is actually right, not whether a number went up. That means trivial baselines, confidence intervals, failure analysis, and auditing the data before blaming the model."
+          intro="Right now that’s mostly one project: getting vision-language models to segment sea ice in satellite radar images. On the side, I’ve been looking at what fine-tuning actually changes inside a language model."
         />
 
         <article className="research-lead reveal" aria-labelledby={`r-${lead.id}`}>
@@ -87,7 +87,7 @@ export default function Research() {
               ))}
             </ul>
             <p className="research-note">
-              Looking for research internships and collaborations in multimodal learning, speech and interpretability.{" "}
+              I’m looking for research internships in multimodal learning, speech or interpretability.{" "}
               <a className="text-link" href="#contact">
                 Get in touch
               </a>

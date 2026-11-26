@@ -62,7 +62,9 @@ export default function TrainingHud() {
           ? contact.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.35
           : document.documentElement.scrollHeight - window.innerHeight;
         setProgress(Math.min(1, Math.max(0, window.scrollY / Math.max(1, end))));
-        setVisible(window.scrollY > window.innerHeight * 0.6);
+        const footer = document.querySelector("footer");
+        const footerInView = footer ? footer.getBoundingClientRect().top < window.innerHeight * 0.9 : false;
+        setVisible(window.scrollY > window.innerHeight * 0.6 && !footerInView);
       });
     };
     update();

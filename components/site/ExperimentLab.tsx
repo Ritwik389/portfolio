@@ -403,10 +403,10 @@ export default function ExperimentLab() {
           id="lab-title"
           title={
             <>
-              Poke at the <em>internals</em>
+              Try a couple of them
             </>
           }
-          intro="Two interactive views into real projects: trace a question through the Digital Twin pipeline, or compare actual autoencoder reconstructions pixel by pixel."
+          intro="Two small demos from real projects. Click through how the Digital Twin answers a question, or compare autoencoder outputs with the original images."
         />
         <div className="lab-panel reveal">
           <div

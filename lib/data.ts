@@ -5,7 +5,7 @@ export const profile = {
   shortName: "Ritwik",
   initials: "RJ",
   role: "Undergraduate researcher · multimodal AI",
-  headline: "I build multimodal models and measure honestly where they fail.",
+  headline: "IT student at DTU working on machine learning research.",
   summary:
     "IT undergraduate at Delhi Technological University working on vision-language reasoning for remote sensing and on speech separation, interested in multimodal models and interpretability. I build ML systems end to end and evaluate them with reproducible experiments.",
   location: "New Delhi, India",
@@ -49,10 +49,10 @@ export const research: ResearchItem[] = [
     status: "Paper in preparation",
     area: "Remote sensing · Vision-language reasoning",
     summary:
-      "Can a vision-language model follow a text query and segment the right ice in synthetic-aperture radar imagery, including scattered floes that are easy to miss?",
+      "Can a vision-language model take a text prompt and segment the right ice in a satellite radar image, including small, scattered floes?",
     points: [
       "Benchmarked 7 open-source language-guided segmentation models on SAR sea-ice imagery and fine-tuned 3B-parameter vision-language models with reinforcement learning (GRPO).",
-      "Built an evaluation protocol with per-class metrics, bootstrap confidence intervals and trivial baselines, so that a gain counts only if it beats chance by a clear margin.",
+      "Built an evaluation protocol with per-class metrics, bootstrap confidence intervals and trivial baselines.",
       "Ran a failure analysis that exposed a key weakness on dispersed targets, and audited the dataset to find and fix a mismatch between text queries and the model’s input images.",
       "Now designing a new reasoning segmentation model with a custom RL reward function to segment the scattered targets existing models miss.",
     ],
@@ -64,7 +64,7 @@ export const research: ResearchItem[] = [
     status: "Independent study",
     area: "Mechanistic interpretability",
     summary:
-      "What happens to a language model’s internal features when it is fine-tuned on code? Sparse autoencoders trained before and after, compared feature by feature.",
+      "How does fine-tuning a language model on code change what it represents internally? I trained sparse autoencoders before and after, and compared the features.",
     points: [
       "Trained TopK sparse autoencoders (k = 32, 3,072 features) on layer-8 residual-stream activations of Pythia-160M from 50M OpenWebText tokens.",
       "Fine-tuned the base model on Python code, trained a second SAE under identical conditions, and matched features with cosine similarity and the Hungarian algorithm to separate expected from collateral drift.",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
   {
     id: "voicesep",
     title: "VoiceSep",
-    tagline: "Five voices, one recording, five clean tracks.",
+    tagline: "Separates up to five overlapping speakers in English and Hindi.",
     period: "Nov 2026",
     kind: "featured",
     category: "Speech",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
   {
     id: "pramana",
     title: "PRAMANA",
-    tagline: "Legal answers that carry their own proof.",
+    tagline: "A legal research assistant that cites and checks its sources.",
     period: "Sep – Oct 2026",
     kind: "featured",
     category: "LLM systems",
@@ -155,7 +155,7 @@ export const projects: Project[] = [
   {
     id: "digital-twin",
     title: "Digital Twin",
-    tagline: "Ask Jensen Huang anything, and hear him cite his sources.",
+    tagline: "A Jensen Huang chatbot that answers in his voice, with sources.",
     period: "Jun – Oct 2026",
     kind: "featured",
     category: "LLM systems",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
   {
     id: "cipher",
     title: "CIPHER",
-    tagline: "Offline, air-gapped multimodal cyber-intelligence.",
+    tagline: "A multimodal intelligence tool that runs fully offline.",
     period: "Sep 2026",
     kind: "selected",
     category: "Multimodal",
@@ -212,7 +212,7 @@ export const projects: Project[] = [
   {
     id: "morphlab",
     title: "MorphLab",
-    tagline: "Real-time face swapping, measured like research.",
+    tagline: "Real-time face swapping on live video.",
     period: "2026",
     kind: "selected",
     category: "Vision",
@@ -315,7 +315,7 @@ export const awards: Award[] = [
     title: "PRAMANA & CIPHER",
     event: "Smart India Hackathon 2026",
     result: "Cleared DTU internal round",
-    detail: "Two problem statements, two prototypes: proof-carrying legal RAG and an air-gapped multimodal intelligence system.",
+    detail: "Both of my SIH teams got through the internal round: PRAMANA (a legal research assistant) and CIPHER (an offline multimodal system).",
   },
   {
     id: "sih-2025",

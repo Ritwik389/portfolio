@@ -387,11 +387,10 @@ export default function Notebook() {
           <div className="nb-cells">
             <section className="nb-cell nb-cell-md">
               <h2>
-                Ritwik Jain <span>— the notebook edition</span>
+                ritwik.ipynb
               </h2>
               <p>
-                Same portfolio, different interface. Every cell below runs against the same data as the website. Type <code>help()</code> to see what
-                the kernel understands, or tap a suggestion.
+                The same portfolio, as a Jupyter notebook. Type <code>help()</code> to see the commands, or click one of the suggestions below.
               </p>
             </section>
 

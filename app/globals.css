@@ -2299,7 +2299,7 @@ textarea.field {
   border-bottom: 1px solid var(--panel-line);
 }
 .footer-sign {
-  font: 600 clamp(48px, 9vw, 128px) / 0.9 var(--font-display);
+  font: 600 clamp(40px, 6.4vw, 92px) / 0.95 var(--font-display);
   letter-spacing: -0.055em;
 }
 .footer-sign span {

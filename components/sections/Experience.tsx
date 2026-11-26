@@ -12,7 +12,7 @@ export default function Experience() {
           id="experience-title"
           title={
             <>
-              Production ML, teaching, <em>and shipping with teams</em>
+              Work and teaching
             </>
           }
         />

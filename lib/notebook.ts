@@ -181,14 +181,12 @@ function findProject(data: NotebookData, raw: string) {
 }
 
 const zen = [
-  "Beautiful baselines are better than ugly SOTA.",
-  "A metric without a confidence interval is a rumour.",
-  "Trivial baselines first; claims after.",
-  "If the model fails, the failure analysis is the paper.",
-  "Audit the dataset before you blame the model.",
-  "Abstaining is better than hallucinating.",
-  "Notebooks are for exploring; pipelines are for Mondays.",
-  "Ship it end to end, then make it honest.",
+  "Check the dataset before blaming the model.",
+  "Save checkpoints. Kaggle sessions end without warning.",
+  "Run the baseline first. It’s often closer than you’d like.",
+  "Read the whole error message.",
+  "If the demo works on the first try, something is wrong.",
+  "Write the README while you still remember how it works.",
 ];
 
 export function run(rawInput: string, data: NotebookData): Output[] {
@@ -377,7 +375,7 @@ export function run(rawInput: string, data: NotebookData): Output[] {
     ] }];
 
   if (lower === "import this")
-    return [{ kind: "md", title: "The Zen of Ritwik", lines: zen }];
+    return [{ kind: "md", title: "Things I learned the hard way", lines: zen }];
 
   if (lower === "import antigravity")
     return [{ kind: "links", links: [{ label: "xkcd 353 — you’re flying!", href: "https://xkcd.com/353/" }] }];

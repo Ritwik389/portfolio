@@ -14,7 +14,7 @@ export default function About() {
           id="about-title"
           title={
             <>
-              Curious by default, <em>rigorous by habit</em>
+              A bit about me
             </>
           }
         />
@@ -27,21 +27,22 @@ export default function About() {
             <img src={profile.portrait} alt="Portrait of Ritwik Jain in a dark blazer and white shirt" width={1193} height={1318} loading="lazy" />
             <figcaption className="plate-caption">
               <span className="mono-label">FIG. 05 · the researcher</span>
-              <span className="plate-caption-text">Rarely this well dressed during a training run.</span>
+              <span className="plate-caption-text">Me, on a day I dressed up.</span>
             </figcaption>
           </figure>
 
           <div className="about-text reveal">
             <p className="about-lead">
-              I’m a second-year IT undergraduate at Delhi Technological University. I like problems where the honest answer takes work: is the model
-              right, or just confident?
+              I’m a second-year IT student at Delhi Technological University. Most of my time goes into machine learning, either research or
+              building things.
             </p>
             <p>
-              My research is on reasoning segmentation for SAR sea-ice imagery: benchmarking vision-language models, fine-tuning them with GRPO, and
-              digging into why they miss scattered targets. Outside the lab I build systems end to end, from a five-speaker speech separator trained on
-              a free GPU to RAG assistants that prove their claims, and I spent a summer at Deloitte moving ML from notebooks into production on AWS.
+              My research is on SAR sea-ice images: I benchmark vision-language models, fine-tune them with GRPO, and try to work out why they miss
+              small, scattered pieces of ice. Outside of that I like building complete projects, like a speech separator I trained on Kaggle’s free
+              GPU and a legal research assistant for Smart India Hackathon. This summer I interned at Deloitte, turning notebook-based ML workflows
+              into AWS Glue jobs.
             </p>
-            <p>I also co-teach first-year students machine learning at AIMS-DTU and mentor school students.</p>
+            <p>I also help run the first-year ML sessions at AIMS-DTU, and this semester I mentored a Class XI group at a government school.</p>
 
             <div className="now">
               <p className="mono-label">

@@ -45,8 +45,8 @@ const floes: Floe[] = (() => {
 
 const modes = [
   { id: "query", label: "Query", note: "A text query asks for the scattered floes in a radar scene." },
-  { id: "typical", label: "Typical model", note: "Large compact floes are captured; small dispersed ones are missed. This is the weakness the failure analysis exposed." },
-  { id: "target", label: "Goal", note: "The aim of the new model and RL reward: recover the dispersed targets too." },
+  { id: "typical", label: "Typical model", note: "Large compact floes are captured; small dispersed ones are missed. This is the main failure I found in current models." },
+  { id: "target", label: "Goal", note: "What I’m working towards with the new model and RL reward: catch the scattered ones too." },
 ] as const;
 
 export default function SeaIceFigure() {
