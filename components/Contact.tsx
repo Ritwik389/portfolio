@@ -177,6 +177,9 @@ export default function Contact() {
             {isSending ? "Sending…" : "Send message"}
             <ArrowUpRight size={17} aria-hidden="true" />
           </motion.button>
+          <p className="form-privacy">
+            Your message goes straight to my inbox through Web3Forms. No tracking, no mailing list.
+          </p>
           <p
             id="contact-status"
             role="status"

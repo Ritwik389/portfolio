@@ -1100,6 +1100,13 @@ main:focus {
 .feature.is-flipped .feature-media {
   order: 2;
 }
+.feature > *,
+.research-lead > *,
+.hero-grid > *,
+.contact-grid > *,
+.about-grid > * {
+  min-width: 0;
+}
 .feature-index {
   display: flex;
   align-items: center;
@@ -2145,11 +2152,6 @@ main:focus {
 .rating-extra {
   grid-column: 1 / -1;
 }
-.ratings-status {
-  margin-top: 10px;
-  font: 400 12px/1.4 var(--font-mono);
-  color: var(--faint);
-}
 
 /* ————————————————————————————————— contact ————————————————————————————————— */
 .section-contact {
@@ -2258,6 +2260,11 @@ textarea.field {
 }
 .contact-submit:disabled {
   opacity: 0.7;
+}
+.form-privacy {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--panel-muted);
 }
 #contact-status {
   min-height: 1.4em;
@@ -3119,31 +3126,58 @@ html.is-overfit .hero-dot {
 }
 
 /* ————————————————————————————————— 404 ————————————————————————————————— */
-.oom {
+.lost {
   min-height: 100dvh;
   display: grid;
   align-content: center;
   justify-items: start;
-  gap: 18px;
-  max-width: 760px;
+  gap: 20px;
+  max-width: 720px;
   margin-inline: auto;
   padding: 48px var(--gutter);
 }
-.oom-trace {
-  width: 100%;
-  padding: 16px;
-  border-radius: 10px;
-  background: color-mix(in oklab, #e5484d 9%, transparent);
-  font: 400 13px/1.6 var(--font-mono);
-  white-space: pre-wrap;
-  color: var(--ink-2);
+.lost .lost-code {
+  font: 700 clamp(96px, 22vw, 200px) / 0.8 var(--font-display);
+  letter-spacing: -0.06em;
+  color: var(--line-2);
 }
-.oom h1 {
-  font: 650 clamp(32px, 5vw, 52px) / 1.05 var(--font-display);
+.lost h1 {
+  font: 650 clamp(30px, 5vw, 48px) / 1.05 var(--font-display);
   letter-spacing: -0.035em;
 }
-.oom p {
+.lost h1 em {
+  color: var(--accent);
+}
+.lost p {
+  max-width: 560px;
+  font-size: 17.5px;
+  line-height: 1.6;
   color: var(--muted);
+}
+.lost-log {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: 1px dashed var(--line-2);
+  background: var(--surface);
+  font: 400 14px/1.8 var(--font-mono);
+  color: var(--ink-2);
+}
+.lost-log li::before {
+  content: "✗ ";
+  color: var(--signal);
+}
+.lost-log li.is-empty::before {
+  content: "";
+}
+.lost-log li.is-empty {
+  color: var(--faint);
+}
+.lost-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* ————————————————————————————————— responsive ————————————————————————————————— */
@@ -3345,6 +3379,20 @@ html.is-overfit .hero-dot {
   }
 }
 @media (max-width: 520px) {
+  .vs-wave {
+    gap: 1px;
+  }
+  .vs-row {
+    grid-template-columns: 40px 1fr;
+  }
+  .vs-head {
+    gap: 8px;
+  }
+  .vs-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .nav-inner {
     height: 54px;
   }

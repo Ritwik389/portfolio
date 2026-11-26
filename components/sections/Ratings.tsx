@@ -10,7 +10,6 @@ const show = (n: number | null) => (n === null ? "—" : format.format(n));
 
 export default function Ratings() {
   const [ratings, setRatings] = useState<RatingsPayload>(fallbackRatings);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -24,10 +23,7 @@ export default function Ratings() {
       .catch(() => {
         /* keep the bundled snapshot */
       })
-      .finally(() => {
-        window.clearTimeout(timeout);
-        setLoading(false);
-      });
+      .finally(() => window.clearTimeout(timeout));
     return () => {
       controller.abort();
       window.clearTimeout(timeout);
@@ -46,7 +42,7 @@ export default function Ratings() {
       <ul className="ratings">
         {rows.map((row) => (
           <li key={row.name}>
-            <a href={row.href} target="_blank" rel="noopener noreferrer">
+            <a href={row.href} target="_blank" rel="noopener noreferrer" aria-label={`${row.name} profile: peak rating ${show(row.peak)}, ${row.extra}`}>
               <span className="rating-name">{row.name}</span>
               <span className="rating-peak">
                 {show(row.peak)} <small>peak</small>
@@ -57,9 +53,6 @@ export default function Ratings() {
           </li>
         ))}
       </ul>
-      <p className="ratings-status" role="status" aria-live="polite">
-        {loading ? "Checking profiles…" : ratings.mode === "snapshot" ? "As of the latest site build" : "Synced with coding profiles"}
-      </p>
     </div>
   );
 }

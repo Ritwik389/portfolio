@@ -46,7 +46,17 @@ export const metadata: Metadata = {
     "Delhi Technological University",
     "machine learning portfolio",
   ],
-  icons: { icon: assetPath("/favicon.svg") },
+  icons: {
+    icon: [
+      { url: assetPath("/favicon.svg"), type: "image/svg+xml" },
+      { url: assetPath("/icon-192.png"), sizes: "192x192", type: "image/png" },
+    ],
+    apple: assetPath("/apple-touch-icon.png"),
+  },
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
   openGraph: {
     type: "profile",
     url: `${siteUrl}/`,
